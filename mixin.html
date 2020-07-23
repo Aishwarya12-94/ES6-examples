@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIXIN</title>
+</head>
+<body>
+    <script>
+        let bird = {
+  name: "Donald",
+  numLegs: 2
+};
+
+let boat = {
+  name: "Warrior",
+  type: "race-boat"
+};
+
+// Add your code below this line
+let glideMixin=function(obj){
+  obj.glide = function(){
+    console.log("Gliding!");
+  }
+}
+glideMixin(bird);
+glideMixin(boat);
+bird.glide();
+boat.glide();
+    
+    </script>
+</body>
+</html>

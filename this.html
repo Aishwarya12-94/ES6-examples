@@ -1,0 +1,18 @@
+<script>
+    class Students {
+        constructor(names){
+            this.names= names;
+            this.mood = "Active";
+    }
+        
+        showDetails (){
+          
+            this.names.forEach ((val)=>{
+                alert ("the mood of "+val+ " is " +this.mood);
+            })
+        }
+    }
+    var students = ["Chirag","Aishwarya","Aish"];
+    var studentsOb= new Students (students);
+    studentsOb.showDetails();
+</script>

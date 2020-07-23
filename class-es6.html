@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLASS</title>
+</head>
+<body>
+    <script>
+        class Car {
+            ownerName = "Aish";
+            chasisNo;
+            privateChasis;
+            constructor(ownerName,model,chasisNo){
+                this.ownerName = ownerName;
+                this.model = model;
+                this.chasisNo = chasisNo;
+            }
+        showCarDetails (){
+            alert (`The owner name is  ${this.ownerName} and model is  ${this.model} , chasisNo is ${this.chasisNo}` );
+        }
+        get chasisPartialDetails(){
+            if(this.privateChasis == undefined){
+                var modifiedChasis = this.chasisNo.substr(0,4);
+                return modifiedChasis;
+            }else {
+                return this.privateChasis;
+            }
+        }
+        set chasisPartialDetails(val){
+            this.privateChasis = val;
+        }
+        }
+        var hondaCity = new Car ("Aish","HondaCity","asdfk17727");
+        hondaCity.chasisPartialDetails = "ABCDSGHGS";
+        alert(hondaCity.chasisPartialDetails);
+       /* class SuperCar extends Car {
+            constructor(onwerName,model,chasisNo,cost,power){
+                super(onwerName,model,chasisNo);
+                this.cost = cost;
+                this.power =power;
+            }
+            showAdittionalDetails(){
+                alert (`cost = ${this.cost} power = ${this.power}`);
+            }
+        }
+        var ferrariCar = new SuperCar ("sunny" , "Ferrari", "1234", "1 billion dollars", "100mph");
+        ferrariCar.showCarDetails();
+        ferrariCar.showAdittionalDetails();*/
+      
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<script>
+   //usual way
+    const add =function(a,b){
+        return a+b;
+    }
+    add (4,5);
+
+    //arrow function for single line return function
+    const add =(a,b)=> a+b;
+    add (4,5);
+
+    //for multi line functions
+    const add = (a,b)=> {let sum = a+b; alert (sum);};
+    add (3,2);
+
+    //for returning object multi line
+    const getStudents = ()=> {
+        return {
+            name:"Aish",
+            hobby: "Dance"
+        }
+    }
+
+    //for returning object single line
+    const getStudents = ()=> ({
+            name:"Aish",
+            hobby: "Dance",
+            getHobby:function(){
+                alert(this.hobby);
+            } //here it is a property and also its same like a class and here 'this' is accessible
+        }
+    )
+    var returnVal = getStudents();
+    returnVal.getHobby;
+
+        //using object function property
+    const getStudents = ()=> ({
+            name:"Aish",
+            hobby: "Dance",
+            getHobby(){
+                alert(this.hobby);
+            }
+        }
+    )
+    var returnVal = getStudents();
+    returnVal.getHobby();
+    
+</script>

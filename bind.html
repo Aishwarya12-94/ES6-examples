@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bind example</title>
+</head>
+<body>
+    <h2>HELLO </h2>
+   <script>
+       function largestOfFour(arr) {
+  return arr.map(Function.apply.bind(Math.max, null));
+}
+console.log(largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]));
+   </script> 
+</body>
+</html>
